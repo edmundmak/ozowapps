@@ -1,4 +1,4 @@
-﻿using Sorting.Services;
+﻿using Logging;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,6 +8,7 @@ namespace Sorting
 {
     public  class GetSorting: IGetSorting
     {
+
         public string SortedListLettersUsingBuiltIn(string inputText)
         {
             string cleanInput = Regex.Replace(inputText.ToLower(), Constants.RemoveUnwantedCharacters, "");

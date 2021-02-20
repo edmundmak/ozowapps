@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using gameoflife;
+using Microsoft.Extensions.DependencyInjection;
 using Sorting;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,7 @@ namespace ozowapps
             // instantiate
             var services = new ServiceCollection();
             services.AddSingleton<IGetSorting, GetSorting>();
+            services.AddSingleton<IGames, Game>();
             // build the pipeline
             provider = services.BuildServiceProvider();
         }
